@@ -1,0 +1,17 @@
+<div class="container" style="padding-left: 400px; margin-top: 20px;">
+<h2 style="padding-left:100px;">Details</h2>
+
+<div class="card" style="width: 20rem; margin-top: 30px; margin-bottom: 10px;">
+    <img [src]="proData.imageURL" class="card-img-top" alt="..." width="250" height="250">
+    <div class="card-body">
+      <h5 class="card-title">{{proData.name}}</h5>
+      <p class="card-text"> Price : {{proData.price}}</p>
+      <p class="card-text"> Description : {{proData.description}}</p>
+      <p class="card-text"> Manufacturer : {{proData.manufacturer}}</p>
+      <p class="card-text"> Available Items : {{proData.availableItems}}</p>
+     
+    </div>
+  </div>
+
+  <a class="btn btn-outline-success"  [routerLink]="['/products']">Back</a>
+</div>

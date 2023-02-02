@@ -1,0 +1,19 @@
+<h2> Latest Products</h2>
+<input class="form-control me-2" type="text" [(ngModel)]="search"  >
+<div class="row" style="margin-top: 50px;">
+  
+    <div class="col-sm-4" *ngFor="let pro of proData|paginate: { itemsPerPage: 3, currentPage: p }|search:search">
+        <div class="card" style="width: 18rem;">
+            <img [src]="pro.imageURL" class="card-img-top" alt="..." width="250px" height="250px">
+            <div class="card-body">
+              <h5 class="card-title">{{pro.name}}</h5>
+              <p class="card-text"> Price : {{pro.price}}</p>
+              <a class="btn btn-success" [routerLink]="['/view',pro._id]">view</a>
+              <button class="btn btn-danger" *ngIf="isAdmin" (click)="delPro(pro._id)"> Delete</button>
+              <a class="btn btn-success"  *ngIf="isAdmin" [routerLink]="['/edit',pro._id]">Edit</a>
+            </div>
+          </div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+

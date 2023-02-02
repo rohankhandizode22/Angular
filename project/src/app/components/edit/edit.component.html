@@ -1,0 +1,12 @@
+<div class="container"><br>
+    <h3 class="text-center"> Edit Product</h3>
+    <form (ngSubmit)="updatedata()" >
+      <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" [(ngModel)]="myData.name" class="form-control" placeholder="{{proData.name}}" />
+      </div>
+      <div class="form-group">
+        <label>Price</label>
+        <input type="text" name="city" [(ngModel)]="myData.price" class="form-control" placeholder="{{proData.price}}"/>
+        <input type="submit" value="Update" class="btn btn-success" />
+      </div>

@@ -1,0 +1,9 @@
+--> Guards :- to protect a route. It is just like a service.If it return true then route is activate otherwise we can redirect.
+  -> canActivate : call when a route is call.if return return then component is load in a load 
+  -> canDeactivate :- when we leave from a component 
+   ng g g guradname 
+    -> to call a guard 
+     AppModule (load all guard in providers)
+     providers:[load]
+    -> In routing 
+    {path:'products',component:ProductComponent,canActivate:[load]}
