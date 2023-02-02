@@ -1,0 +1,8 @@
+<h2> LifeCycle Hooks Implementation</h2>
+<button (click)="counter()"> Click Here</button>
+<hr/>
+<div *ngFor="let pro of proData">
+     <p> Pname : {{pro.name}} <br/> Price: {{pro.price}} <br/>
+    <button> Add Cart</button></p>
+</div>
+<app-lifecyclechild [mycount]="count"></app-lifecyclechild>

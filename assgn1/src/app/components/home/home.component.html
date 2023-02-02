@@ -1,0 +1,25 @@
+<h2 style="color:green"> {{title}}</h2>
+<input type="text" [(ngModel)]="title"/>
+<div *ngIf="courses.length>0 else elsepart">
+    <h5> Courses</h5>
+    <ul>
+        <li *ngFor="let c of courses"> {{c}}</li>
+    </ul>
+</div>
+
+<ng-template #elsepart> Else Part</ng-template>
+<hr/>
+<div *ngIf="courses.length>0 then thenpart else elsepart"></div>  
+<ng-template #thenpart> Then Part</ng-template>
+<ng-template #elsepart> Else Part</ng-template>
+<hr/>
+<button (click)="abc()"> Click here</button>
+<ul [ngSwitch]="dataInfo">
+   <li *ngSwitchCase="'Spiderman'"> Spiderman</li>
+    <li *ngSwitchCase="'Ironman'"> Ironman</li>
+    <li *ngSwitchCase="'abc'"> abc</li>
+    <li *ngSwitchDefault=""> Mymen</li>
+</ul>
+<hr/>
+<button [disabled]="status"> Hello Button</button> <br/>
+<img [src]="imagePath"/>
